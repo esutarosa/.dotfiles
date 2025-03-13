@@ -60,8 +60,8 @@ keymap.set("n", "<C-j>", function()
 end, opts)
 
 -- Rename all similarities
--- keymap.set("n", "<leader>ra", function()
---   local current_word = vim.fn.expand("<cword>")
---   local new_word = vim.fn.input("Rename all '" .. current_word .. "' to: ")
---   vim.cmd("%s/\\<" .. current_word .. "\\>/" .. new_word .. "/g")
--- end, opts)
+keymap.set("n", "<leader>rn", function()
+  local current_word = vim.fn.expand("<cword>")
+  local new_word = vim.fn.input("Rename all '" .. current_word .. "' to: ")
+  vim.cmd("%s/\\<" .. current_word .. "\\>/" .. new_word .. "/g")
+end, opts)
